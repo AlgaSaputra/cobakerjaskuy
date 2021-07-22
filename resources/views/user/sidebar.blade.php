@@ -8,11 +8,11 @@
         <i class="far nav-icon fas fa-search"></i>
         <p>Cari Pekerjaan</p>
       </a>
-        <li class="nav-item">
+        {{-- <li class="nav-item">
           <a href="/tips" class="nav-link">
             <i class="far nav-icon fas fa-book"></i>
             <p>Tips</p>
-          </a>
+          </a> --}}
         </li>
         <li class="nav-item">
           <a href="/profil" class="nav-link">
