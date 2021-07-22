@@ -5,7 +5,7 @@
 <form class="form" method="get" action="{{ url('/') }}">
     <div class="form-group w-100 mb-3">
         <label for="search" class="d-block mr-2">Cari Pekerjaanmu!</label>
-        <input type="search" name="keyword" class="form-control w-75 d-inline" placeholder="Masukkan keyword">
+        <input type="search" name="keyword" class="form-control w-75 d-inline" placeholder="Ketik nama pekerjaan">
         <button type="submit" class="btn btn-primary mb-1">Cari</button>
     </div>
 </form>
@@ -22,18 +22,39 @@
 
 @foreach($conten as $item)
 <br>
-    <div class="card">
-        <img class="card-img-top" style="width: 40%" src="{{ asset('foto_perusahaan/'. $item->foto_perusahaan ) }}">
-        <div class="card-body">
-          <h5 class="card-title">{{$item['nama_perusahaan']}}</h5>
-          <h6 class="card-text">{{$item['pekerjaan']}}</h6>
-          <p class="card-text">{{$item['syarat_ketentuan']}}</p>
-          <p class="card-text"><small class="text-muted">{{$item['kontak']}}</small></p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+          <div class="card">
+              <img class="card-img-top" src="{{ asset('foto_perusahaan/'. $item->foto_perusahaan ) }}">
+              <div class="card-body">
+                <h5 class="card-title">{{$item['nama_perusahaan']}}</h5>
+                <br>
+                <p class="card-text">{{$item['pekerjaan']}}</p>
+                <p class="card-text">{{$item['syarat_ketentuan']}}</p>
+                <p class="card-text"><small class="text-muted">{{$item['kontak']}}</small></p>
+              </div>
+            </div>
         </div>
-      </div>
+    </div>
+</div>
   @endforeach
 
-
+  {{-- <div class="container">
+      <div class="col">
+          <div class="col-md-3">
+            <div class="card">
+                <img class="card-img-top" style="width: 40%" src="{{ asset('foto_perusahaan/'. $item->foto_perusahaan ) }}">
+                <div class="card-body">
+                  <h5 class="card-title">{{$item['nama_perusahaan']}}</h5>
+                  <h6 class="card-text">{{$item['pekerjaan']}}</h6>
+                  <p class="card-text">{{$item['syarat_ketentuan']}}</p>
+                  <p class="card-text"><small class="text-muted">{{$item['kontak']}}</small></p>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div> --}}
 
 
     {{-- <!-- Bootstrap core JavaScript -->
