@@ -8,20 +8,18 @@
         <i class="far nav-icon fas fa-search"></i>
         <p>Cari Pekerjaan</p>
       </a>
-        {{-- <li class="nav-item">
-          <a href="/tips" class="nav-link">
-            <i class="far nav-icon fas fa-book"></i>
-            <p>Tips</p>
-          </a> --}}
-        </li>
+      </li>
         <li class="nav-item">
           <a href="/profil" class="nav-link">
             <i class="far nav-icon fas fa-edit"></i>
             <p>Profil</p>
           </a>
         </li>
+        {{-- <li class="nav-item">
+          <a href="/tips" class="nav-link">
+            <i class="far nav-icon fas fa-book"></i>
+            <p>Tips</p>
+          </a>
+        </li> --}}
       </ul>
-    </li>
-    </li>
-  </ul>
 </nav>

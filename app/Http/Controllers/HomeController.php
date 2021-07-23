@@ -27,7 +27,7 @@ class HomeController extends Controller
         $keyword = $request->keyword;
         $conten = Conten::where('pekerjaan', 'LIKE', '%'.$keyword.'%')
         ->orwhere('nama_perusahaan', 'LIKE', '%'.$keyword.'%')
-        ->paginate(10);
+        ->paginate(100);
         $conten->appends($request->all());
         return view('user.content', compact('conten'));
     }
