@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\PenggunaModel;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use  Illuminate\Support\Facades\Hash;
 
 class ProfilController extends Controller
 {
@@ -22,6 +23,7 @@ class ProfilController extends Controller
         $user = PenggunaModel::where('id', Auth::user()->id)->first();
         $user->name = $request->name;
         $user->email = $request->email;
+        $user->password = Hash::make($request->password);
 
         $user->update();
         return redirect('profil');
